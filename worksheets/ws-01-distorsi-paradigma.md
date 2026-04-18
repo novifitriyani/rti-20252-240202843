@@ -61,25 +61,25 @@ Dalam DSR, artefak **bukan tujuan akhir** — ia adalah instrumen untuk menghasi
 ## Template A.1 — Research Mindset Self-Assessment
 
 ```
-Nama Peneliti    : ____________________
-Tanggal          : ____________________
+Nama Peneliti    : Novi Fitriyani
+Tanggal          : 18 April 2026
 
 1. Ketika membaca klaim "metode X 95% akurat":
-   - Pertanyaan pertama saya: ____________________
-   - Data yang dibutuhkan untuk verifikasi: ____________________
+   - Pertanyaan pertama saya: Apakah nilai akurasi tersebut dihitung menggunakan metrik evaluasi yang tepat dan relevan dengan tujuan penelitian, serta apakah terdapat metode pembanding (baseline) yang digunakan untuk memastikan bahwa peningkatan performa tersebut benar-benar signifikan dan bukan disebabakan oleh bias data, overfitting, atau kondisi eksperimen yang terbatas?
+   - Data yang dibutuhkan untuk verifikasi: Diperlukan informasi mengenai dataset yang digunakan (termasuk ukuran, distribusi, dan keseimbangan data), prosedur eksperimen (train-test split atau cross validation), serta hasil perbandiangan dengan metode lain untuk memastikan validitas klaim performa.
 
 2. Posisi paradigma:
-   - Pendekatan: [ ] Positivis  [ ] Interpretivis  [ ] Design Science  [ ] Mixed
-   - Alasan: ____________________
+   - Pendekatan: [x] Positivis  [ ] Interpretivis  [x] Design Science  [ ] Mixed
+   - Alasan: Penelitian menggunakan pendekatan Design Science karena berfokus pada pembangunan artefak berupa sistem informasi untuk menyelesaikan masalah pengarsipan manual. Selain itu, terdapat positivis karena penelitian mengandung klaim peningkatan efisiensi yang secara implisit memerlukan pengujian objektif berbasis data. 
 
 3. Identifikasi distorsi:
-   - Asumsi tersembunyi: ____________________
-   - Sumber bias potensial: ____________________
-   - Langkah mitigasi: ____________________
+   - Asumsi tersembunyi: Penelitian mengasumsikan bahwa digitalisasi sistem pengarsipan secara otomatis akan meningkatkan efisiensi, kecepatan, dan keamanan tanpa mempertimangkan faktor lain seperti kualitas data input, kesiapan pengguna, serta kompleksitas sistem yang dapat mempengaruhi hasil.
+   - Sumber bias potensial: Bias dapat muncul karena penggunaan data yang hanya berasal dari satu program studi sehingga tidak representatif, serta tidak adanya perbandingan dengan sistem lain yang dapat menyebabkan bias konfirmasi terhadap klaim peningkatan performa.
+   - Langkah mitigasi: Diperlukan pengujian pada lebih dari satu instansi atau lingkungan yang berbeda, penggunanaan metrik kuantitatif yang jelas (misalnya waktu pencarian dokumen sebelum dan sesudah sistem), serta perbandingan dengan metode atau sistem lain agar hasil penelitian lebih objektif, valid, dan dapat direplikasi.
 
 4. Komitmen etika:
-   - Data yang tidak akan dimanipulasi: ____________________
-   - Batasan yang diakui sejak awal: ____________________
+   - Data yang tidak akan dimanipulasi: Seluruh data eksperimen, termasuk data yang menunjukkan hasil yang kurang baik atau tidak sesuai harapan, tetap dipertahankan tanpa penghapusan, pemilihan selektif, maupun perubahan untuk memperkuat hasil penelitian
+   - Batasan yang diakui sejak awal: Penelitian memiliki keterbatasan pada skala data yang kecil, ruang lingkup yang komprehensif, sehingga hasil penelitian belum dapat digenerelisasi secara luas tanpa validasi tambahan.
 ```
 
 ---
@@ -93,9 +93,9 @@ Pilih satu paper riset di bidang TI yang mengklaim "metode X meningkatkan perfor
 > **Contoh domain TI:** "Deteksi anomali lalu-lintas jaringan menggunakan CNN — akurasi meningkat 94% vs baseline SVM 87%." Distorsi potensial: apakah dataset normal/anomali seimbang? Apakah hanya diuji pada satu vendor traffic?
 
 **Paper yang dipilih:**
-> Judul: _______________________________________________
-> Penulis (Tahun): ______________________________________
-> Sumber/Link DOI: _____________________________________
+> Judul: Rancang Bangun Sistem Informasi Pengarsipan digital (Studi Kasus: Program Studi Informasi)
+> Penulis (Tahun): Astuti Rani Kariam, Kristianus Jago tute, dan Melky Radja (2024)
+> Sumber/Link DOI: https://ejournal.catursakti.ac.id/index.php/simtek/article/view/798 
 
 | Tahap | Apa yang Dilakukan | Potensi Distorsi |
 |-------|-------------------|-----------------|
