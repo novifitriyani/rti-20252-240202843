@@ -99,7 +99,7 @@ Pilih satu paper riset di bidang TI yang mengklaim "metode X meningkatkan perfor
 
 | Tahap | Apa yang Dilakukan | Potensi Distorsi |
 |-------|-------------------|-----------------|
-| Reality → Data | *Contoh: Kumpulkan log server 30 hari* | *Contoh: Hanya ambil jam sibuk* |
+| Reality → Data | Mengamati masalah pengarsipan manual di Program Studi Sistem Informasi yang menyebabkan kesulitan pencarian dan kehilangan dokumen | Data hanya berasal dari satu institusi → tidak mewakili kondisi umum (sampling bias) |
 | Data → Processing | | |
 | Processing → Analysis | | |
 | Analysis → Inference | | |
