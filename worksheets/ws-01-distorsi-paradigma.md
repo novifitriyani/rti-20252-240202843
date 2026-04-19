@@ -62,7 +62,7 @@ Dalam DSR, artefak **bukan tujuan akhir** — ia adalah instrumen untuk menghasi
 
 ```
 Nama Peneliti    : Novi Fitriyani
-Tanggal          : 18 April 2026
+Tanggal          : 19 April 2026
 
 1. Ketika membaca klaim "metode X 95% akurat":
    - Pertanyaan pertama saya: Apakah nilai akurasi tersebut dihitung menggunakan metrik evaluasi yang tepat dan relevan dengan tujuan penelitian, serta apakah terdapat metode pembanding (baseline) yang digunakan untuk memastikan bahwa peningkatan performa tersebut benar-benar signifikan dan bukan disebabakan oleh bias data, overfitting, atau kondisi eksperimen yang terbatas?
@@ -100,16 +100,16 @@ Pilih satu paper riset di bidang TI yang mengklaim "metode X meningkatkan perfor
 | Tahap | Apa yang Dilakukan | Potensi Distorsi |
 |-------|-------------------|-----------------|
 | Reality → Data | Mengamati masalah pengarsipan manual di Program Studi Sistem Informasi yang menyebabkan kesulitan pencarian dan kehilangan dokumen | Data hanya berasal dari satu institusi → tidak mewakili kondisi umum (sampling bias) |
-| Data → Processing | | |
-| Processing → Analysis | | |
-| Analysis → Inference | | |
-| Inference → Knowledge | | |
+| Data → Processing | Data arsip dikonversi ke sistem digital menggunakan database (PHP & MySQL) | Kesalahan input data (human error) dan tidak ada validasi kualitas data |
+| Processing → Analysis | Sistem diuji menggunakan metode black box testing untuk memastikan fungsi berjalan | Pengujian hanya fungsional, tidak mengukur performa nyata (tidak ada metrik kuantitatif seperti waktu/akurasi)  |
+| Analysis → Inference | Disimpulkan bahwa sistem meningkatkan efisiensi, kecepatan, dan kemudahan pengarsipan | Klaim tidak didukung perbandingan dengan sistem lain (tidak ada baseline → weak interface) |
+| Inference → Knowledge | Pengetahuan yang dihasilkan: sistem digital lebih efektif dibanding sistem manual | Generelisasi terlalu luas, padahal hanya diuji pada satu studi kasus (external validity rendah) |
 
-**Distorsi paling besar di tahap:** ________________________
+**Distorsi paling besar di tahap:** Analysis → Interface
 
 **Dua distorsi spesifik yang teridentifikasi:**
-1. ___________________________________________________
-2. ___________________________________________________
+1. Tidak adanya baseline pembanding sehingga klaim peningkatan efisiensi tidak dapat diverifikasi secara objektif.
+2. Samppling bias karena data hanya berasal dari satu instansi sehingga hasil tidak dapat digeneralissai.
 
 ---
 
@@ -119,29 +119,29 @@ Skenario: Seorang peneliti menemukan bahwa jika 3 data point outlier dihapus, ha
 
 | Perspektif | Analisis |
 |------------|---------|
-| Kejujuran ilmiah | *Contoh: Laporkan kedua versi (dengan dan tanpa outlier)* |
-| Transparansi | |
-| Peer review | |
+| Kejujuran ilmiah | Seluruh data, termauk outlier, harus tetap dilaporkan karena merupakan representasi kondisi nyata. Menghapus outlier hanya untuk memperoleh haisl signifikan termasuk manipulasi data (falsification) dan melanggar prinsip integritas ilmiah. Outlier tidak selalu kesalahan, tetapi bisa merepresentasikan fenomena penting sehingga tidak boleh dihapus tanpa alasan metodologis yang kuat. |
+| Transparansi | Peneliti wajib melaporkan kedua hasil, yaitu dengan dan tanpa outlier, serta menjelaskan alasan jika dilakukan penghapusan. Transparansi diperlukan agar pembaca dapat menilai sendiri dampak outlier terhadap hasil dan menghindari praktik memilih data yang mendukung kesimpulan tertentu. |
+| Peer review | Dalam proses peer review, penghapusan data tanpa justifikasi akan dianggap sebagai bias atau manipulasi. Reviewer dapat mempertanyakan validitas hasil dan menolak penelitian karena dianggap tidak merepresentasikan data secara objektif. Praktik membuang data tanpa analisis juga termasuk kesalahan umum yang harus dihindari dalam analisis data. |
 
 **Keputusan akhir dan justifikasi:**
-> ___________________________________________________
+> Seluruh data termasuk outlier harus tetap dilaporkan sebagai hasil utama penelitian. Analisis tanpa outlier dapat disajikan sebagai analisis tambahan dengan penjelasan metodologis yang jelas. Keputusan ini diambil untuk menjaga integritas ilmiah, menghindari manipulasi data, serta memastikan bahwa hasil penelitian merepresentasikan kondisi sebenarnya dan dapat dipercaya.
 
 ---
 
 ## Latihan 3 — Posisi Paradigma
 
-**Topik riset:** ________________________________________
+**Topik riset:** Sistem Informasi Pengarsipan Digital untuk Meningkatkan Efisiensi Pengelolaan Dokumen
 
 > **Skala 1–5:** 1 = tidak sesuai sama sekali dengan topik ini, 5 = sangat sesuai dan dominan digunakan pada riset bertopik serupa.
 
 | Kriteria | Positivis | Interpretivis | Design Science |
 |----------|-----------|---------------|----------------|
-| Kesesuaian dengan topik (1–5) | *Contoh: 4 — topik kuantitatif, cocok uji hipotesis* | *Contoh: 2 — topik tidak studi makna/konteks* | *Contoh: 5 — membangun artefak untuk uji klaim* |
-| Jenis data yang dikumpulkan | *Metrik numerik, log eksperimen* | *Wawancara, observasi kualitatif* | *Hasil uji artefak, komparasi kinerja* |
-| Limitasi paradigma | | | |
+| Kesesuaian dengan topik (1–5) | 4 — terdapat klaim peningkatan efisiensi yang dapat diuji secara kuantitatif | 2 — tidak berfokus pada makna atau persepsi pengguna secara mendalam | 5 — fokus utama adalah membangun sistem sebagai solusi |
+| Jenis data yang dikumpulkan | Metrik kinerja sistem, waktu pencarian dokumen, efisiensi | wawancara pengguna, persepsi terhadap sistem | Hasil implementasi sistem, pengujian fungsional, evaluasi sistem |
+| Limitasi paradigma | Membutuhkan data kuantitatif yang kuat, namun dalam penelitian ini metrik belum lengkap | Tidak cocok karena penelitian tidak mengeksplorasi makna sosial secara mendalam | Fokus pada artefak dapat mengabaikan validitas ilmiah jika tidak disertai evaluasi yang kuat |
 
-**Paradigma yang dipilih:** _____________________________
-**Alasan:** ____________________________________________
+**Paradigma yang dipilih:** Design Science Research (dengan dukungan Positivis)
+**Alasan:** Penelitian berfokus pada pembangunan artefak berupa sistem informasi untuk menyelesaikan masalah nyata (ciri utama Design Science), namun juga mengandung klaim peningkatan efisiensi yang secara implisit memerlukan pengujian objektif berbasis data (unsur Positivis)
 
 ---
 
@@ -150,5 +150,4 @@ Skenario: Seorang peneliti menemukan bahwa jika 3 data point outlier dihapus, ha
 > Sebelum membaca materi ini, apakah pernah mempertanyakan klaim "95% akurat"? Setelah memahami rantai distorsi, pertanyaan apa yang sekarang akan diajukan saat membaca paper?
 
 **Jawaban:**
-> ___________________________________________________
-> ___________________________________________________
+> Sebelum memahami konsep Reesearch Trust Model, klaim seperti "95% akurat" cenderung diterima tanpa analisis mendalam. Setelah memahami rantai distorsi, muncul kebutuhan untuk mempertanyakan bagaimana data dikumpulkan, apakah terdapat bias dalam dataset, metode evaluasi yang digunaakan, keberadaan pembanding (baseline), serta apakah metrik yang digunakan benar-benar sesuai dengan klaim yang disampaikan. Fokus tidak lagi pada hasil akhir, tetapi pada proses yang menhasilkan hasil tersebut. 
