@@ -67,7 +67,7 @@ Masalah riset yang layak harus memenuhi 5 kriteria:
 PROBLEM STATEMENT BUILDER
 
 Domain & Konteks
-  Domain   : mmmmmmm
+  Domain   : 
   Konteks  : ____________________
 
 System Context
