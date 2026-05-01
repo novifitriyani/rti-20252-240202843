@@ -67,33 +67,33 @@ Masalah riset yang layak harus memenuhi 5 kriteria:
 PROBLEM STATEMENT BUILDER
 
 Domain & Konteks
-  Domain   : 
-  Konteks  : ____________________
+  Domain   : Sistem Informasi 
+  Konteks  : Pengelolaan arsip dokumen akademik pada Program Studi sistem Informasi yang masih dilakukan secara manual 
 
 System Context
-  Input       : ____________________
-  Process     : ____________________
-  Output      : ____________________
-  Outcome     : ____________________
-  Constraints : ____________________
-  Stakeholders: ____________________
+  Input       : Data dokumen akademik, surat, laporan, dan arsip administrasi
+  Process     : Input data dokumen, penyimpanan data ke database, pencarian dan pengelolaan arsip secara digital
+  Output      : Arsip digital yang tersimpan rapi dan dapat diakses dengan mudah
+  Outcome     : Pengelolaan dokumen menjadi lebih efektif dan meminimalkan risiko kehilangan data
+  Constraints : Keterbatasan infrastruktur teknologi, kemampuan pengguna, dan kualitas input data
+  Stakeholders: Admin program studi, dosen, mahasiswa, dan staf akademik
 
 Fenomena → Problem
-  Fenomena yang diamati             : ____________________
-  Gejala (symptom) yang terukur     : ____________________
-  Masalah yang didiagnosis          : ____________________
-  Masalah riset (researchable)      : ____________________
-  Variabel yang terukur             : ____________________
+  Fenomena yang diamati             : Pengelolaan arsip dokumen di Program Studi Informasi masih dilakukan secara manual.
+  Gejala (symptom) yang terukur     : Proses pencarian dokumen membutuhkan waktu lama dan berisiko terjadi kehilangan atau kerusakan dokumen.
+  Masalah yang didiagnosis          : Belum adanya sistem informasi terintegrasi untuk pengelolaan arsip digital.
+  Masalah riset (researchable)      : Bagaimana merancang dan mengimplentasikan sistem informasipengarsipan digital yang dapat membantu pengelolaan dan pencarian dokumen secara lebih efektif
+  Variabel yang terukur             : Kecepatan pencarian dokumen, ketersediaan dokumen, fungsionalitas sistem, dan kemudahan penggunaan sistem
 
 Problem Quality Check
-  [ ] Clarity — Apakah satu orang membaca akan paham?
-  [ ] Measurability — Apakah ada metrik kuantitatif?
-  [ ] Relevance — Apakah penting untuk domain?
-  [ ] Testability — Apakah bisa gagal?
-  [ ] Impact — Apakah ada kontribusi jika terjawab?
+  [x] Clarity — Apakah satu orang membaca akan paham?
+  [x] Measurability — Apakah ada metrik kuantitatif?
+  [x] Relevance — Apakah penting untuk domain?
+  [x] Testability — Apakah bisa gagal?
+  [x] Impact — Apakah ada kontribusi jika terjawab?
 
 Problem Statement (1 paragraf):
-  ____________________
+  Pengelolaan arsip pada Program Studi Sistem Informasi masih dilakukan secara manual sehingga menyebabkan proses pencarian dokumen menjadi lambat serta meningkatkan risiko kehilangan atau kerusakan dokumen. Kondisi ini menunjukkan perlunya sistem informasi pengarsipan digital yang mampu membantu pengelolaan dokumen secara lebih terstruktur dan efisien.
 ```
 
 ---
@@ -102,18 +102,17 @@ Problem Statement (1 paragraf):
 
 Pilih satu topik di bidang TI yang diminati. Transformasikan melalui 5 tahap Problem Formation Model.
 
-**Topik awal:** ________________________________________
+**Topik awal:** Sistem Informasi Pengarsipan Digital
 
 | Tahap | Hasil |
 |-------|-------|
-| Reality | *Contoh: Aplikasi e-commerce sering ditinggalkan saat checkout* |
-| Observed Issue (Symptom) | *Contoh: Bounce rate checkout 68%* |
-| Diagnosed Problem (Root Cause) | |
-| Researchable Problem | |
-| Measurable Variable | |
+| Reality | Penngelolaan arsip dokumen asih dilakukan secara manual |
+| Observed Issue (Symptom) | Pencarian dokumen lambat dan dokumen berisiko hilang |
+| Diagnosed Problem (Root Cause) | Tidak adanya sistem pengarsipan digital terintegrasi |
+| Researchable Problem | Bagaimana merancang sistem informasi pengarsipan digital yang efektif |
+| Measurable Variable | Kecepatan pencarian, ketersediaan dokumen, kemudahan penggunaan |
 
-**Apakah terjebak solution-first thinking?** [ ] Ya / [ ] Tidak
-> Jika ya, kembali ke tahap mana? ________________________
+**Apakah terjebak solution-first thinking?** [ ] Ya / [x] Tidak
 
 ---
 
@@ -123,14 +122,14 @@ Gambarkan konteks sistem dari masalah riset di Latihan 1.
 
 | Komponen | Deskripsi |
 |----------|----------|
-| Input | *Contoh: Request HTTP dari browser pengguna* |
-| Process | |
-| Output | |
-| Outcome | |
-| Constraints | |
-| Stakeholders | |
+| Input | Data dokumen akademik dan administrasi |
+| Process | Penyimpanan, pengelolaan, dan pencarian dokumen digital |
+| Output | Dokumen digital yang mudah diakses |
+| Outcome | Efektivitas pengelolaan dokumen meningkat |
+| Constraints | Infrastruktur, kemampuan pengguna, kualitas data |
+| Stakeholders | Admin, dosen, mahasiswa, staf akademik |
 
-**Komponen mana yang paling relevan dengan masalah riset?** _______________
+**Komponen mana yang paling relevan dengan masalah riset?** Process
 
 ---
 
@@ -140,17 +139,16 @@ Evaluasi problem statement yang sudah dibuat menggunakan 5 kriteria.
 
 | Kriteria | Skor (1-5) | Justifikasi |
 |----------|-----------|-------------|
-| Clarity | *Contoh: 4 — cukup jelas tapi perlu spesifikasi dataset* | |
-| Measurability | | |
-| Relevance | | |
-| Testability | | |
-| Impact | | |
+| Clarity | 5 | Masalah dijelaskan secara spesifik dan mudah dipahami |
+| Measurability | 4 | Variabel dapat diukur melalui penngujian sistem |
+| Relevance | 5 | Relevan dengan kebutuhan digitalisasi arsip |
+| Testability | 4 | Sistem dapat diuji melalui implementasi dan pengujian fungsional |
+| Impact | 5 | Memberikan manfaat pada efisiensi pengelolaan dokumen |
 
-**Skor total:** _____ / 25
+**Skor total:** 23 / 25
 
 **Problem statement versi final (1 paragraf):**
-> ___________________________________________________
-> ___________________________________________________
+> Pengelolaan arsip dokumen secara manual pada Program Studi Sistem Informasi masih menimbulkan kendala berupa lambatnya proses pencarian dokumen dan tingginya risiko kehilangan data. Untuk mengatasi permasalahan tersebut, diperlukan sistem informasi pengarsipan digital berbasis web yang mampu membantu penyimpanan, pengelolaan, dan pencarian dokumen secara lebih efektif, tersetruktur dan mudah diakses oleh pengguna.
 
 ---
 
@@ -159,5 +157,4 @@ Evaluasi problem statement yang sudah dibuat menggunakan 5 kriteria.
 > Bandingkan "masalah" yang biasa ditemui saat coding (bug, error) dengan masalah riset. Apa perbedaan fundamental dalam cara mendefinisikan dan mendekati keduanya?
 
 **Jawaban:**
-> ___________________________________________________
-> ___________________________________________________
+> Masalah yang biasa ditemui saat coding umumnya berfokus pada error teknis atau bug agar sistem dapat berjalan dengan benar. Sementara itu, masalah riset berfokus pada identifikasi gap atau permaslahan yang membutuhkan analisis sistematis dan pembuktian ilmiah. Pendekatan coding lebih menekankan solusi langsung sedangkan riset menuntut proses observasi, analisis, pengujian, dan validasi hasil.
