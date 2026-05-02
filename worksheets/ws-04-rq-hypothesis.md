@@ -67,34 +67,34 @@ Jika rantai ini tidak lengkap, RQ belum mature. Bi-directional: RQ yang tidak bi
 ```
 RQ-CONTRIBUTION-HYPOTHESIS
 
-Gap Statement  : ____________________
+Gap Statement  : Belum terdapat evaluasi performa kuantitatif pada sistem informasi pengarsipan digital dalam meningkatkan efektivitas pengelolaan dan pencarian dokumen
 
 Research Question:
-  Tipe         : [ ] Comparison  [ ] Improvement  [ ] Exploratory
-  Formulasi    : ____________________
-  Variabel IV  : ____________________
-  Variabel DV  : ____________________
-  Metrik       : ____________________
-  Dataset      : ____________________
-  Baseline     : ____________________
+  Tipe         : [ ] Comparison  [x] Improvement  [ ] Exploratory
+  Formulasi    : Apakah implementasi sistem informasi pengarsipan digital berbasis web dapat meningkatkan efektivitas pencarian dan pengelolaan dokumen dibandingkan sistem manual pada Program Studi Sistem Informasi?
+  Variabel IV  : Metode pengelolaan arsip (manual vs sistem digital berbasis web)
+  Variabel DV  : Efektifitas pengelolaan dan pencarian dokumen
+  Metrik       : Waktu pencarian dokumen, tingkat ketersedian dokumen, dan kemudahan penggunaan sistem
+  Dataset      : Dokumen akademik dan administrasi Program Studi Sistem Informasi
+  Baseline     : Sistem pengarsipan manual
 
 Quality Check RQ:
-  [ ] Variabel spesifik
-  [ ] Metrik jelas
-  [ ] Baseline ada
-  [ ] Konteks disebutkan
-  [ ] Memerlukan eksperimen (bukan hanya survei literatur)
+  [x] Variabel spesifik
+  [x] Metrik jelas
+  [x] Baseline ada
+  [x] Konteks disebutkan
+  [x] Memerlukan eksperimen (bukan hanya survei literatur)
 
 Contribution Statement:
-  Apa yang baru diketahui : ____________________
-  Jenis kontribusi        : [ ] Improvement  [ ] Comparison  [ ] Novel approach
-  Gap yang diisi          : ____________________
+  Apa yang baru diketahui : Diperoleh bukti empiris mengenai pengaruh implementasi sistem informasi pengarsipan digital terhadap efektivitas pencarian dan pengelolaan dokumen.
+  Jenis kontribusi        : [x] Improvement  [ ] Comparison  [ ] Novel approach
+  Gap yang diisi          : Kurangnya evaluasi performa kuantitatif pada sistem pengarsipan digital.
 
 Hypothesis Pair:
-  H₀ : ____________________
-  H₁ : ____________________
-  Threshold              : ____________________
-  Justifikasi threshold  : ____________________
+  H₀ : Tidak terdapat perbedaan signifikan pada efektivitas pencarian dan pengelolaan dokumen antara sistem pengarsipan manual dan sistem informasi pengarsipan digital berbasis web.
+  H₁ : Terdapat perbedaan signifikan pada efektivitas pencarian dan pengelolaan dokumen antara sistem pengarsipan manual dan sistem informasi pengarsipan digital berbasis web.
+  Threshold              : Penurunan waktu pencarian dokumen minimal 20%
+  Justifikasi threshold  : Penuruna sebesar 20% dianggap cukup signifikan untuk menunjukkan peningkatan efisiensi operasional.
 ```
 
 ---
@@ -103,24 +103,24 @@ Hypothesis Pair:
 
 Gunakan gap yang ditemukan di WS-03. Transformasikan menjadi Research Question.
 
-**Gap dari WS-03:** ____________________________________
+**Gap dari WS-03:** Belum ada evaluasi performa kuantitatif sistem pengarsipan digital
 
 **RQ versi pertama (tulis bebas):**
-> ___________________________________________________
+> Apakah sistem informasi pengarsipan digital dapat meningkatkan efektivitas pengelolaan dokumen?
 
 **Evaluasi RQ:**
 
 | Komponen | Ada? | Isi |
 |----------|------|-----|
-| Metode spesifik | *Contoh: Ya — CNN vs RF* | |
-| Metrik terukur | | |
-| Baseline | | |
-| Dataset/konteks | | |
+| Metode spesifik | Ya | Sistem manual vs sistem digital berbasis web |
+| Metrik terukur | Ya | Waktu pencarian, ketersediaan dokumen |
+| Baseline | Ya | Sistem manual |
+| Dataset/konteks | Ya | Dokumen akademik Program Studi Informasi |
 
-**Tipe RQ:** [ ] Comparison / [ ] Improvement / [ ] Exploratory
+**Tipe RQ:** [ ] Comparison / [x] Improvement / [ ] Exploratory
 
 **RQ versi revisi (setelah evaluasi):**
-> ___________________________________________________
+> Apakah implementasi sistem informasi pengarsipan digital berbasis web dapat meningkatkan efektivitas pencarian dan pengelolaan dokumen dibandingkan sistem manual pada Program Studi Sistem Informasi?
 
 ---
 
@@ -130,14 +130,14 @@ Rumuskan pasangan hipotesis dari RQ di Latihan 1.
 
 | Komponen | Isi |
 |----------|-----|
-| H₀ | *Contoh: Tidak ada perbedaan signifikan F1-Score antara CNN dan RF pada dataset CIC-MalMem-2022* |
-| H₁ | |
-| Metrik | |
-| Threshold | |
-| Justifikasi threshold | |
+| H₀ | Tidak terdapat perbedaan signifikan efektivitas antara sistem manual dan sistem digital |
+| H₁ | Terdapat perbedaan signifikan efektivitas antara sistem manual dan sistem digital |
+| Metrik | Waktu pencarian dokumen, ketersediaan dokumen |
+| Threshold | Penurunan waktu pencarian ≥ 20% |
+| Justifikasi threshold |Menunjukkan peningkatan efisiensi yang terukur |
 
-**Apakah hipotesis ini falsifiable?** [ ] Ya / [ ] Tidak
-> Bagaimana cara membuktikannya salah? ___________________
+**Apakah hipotesis ini falsifiable?** [x] Ya / [ ] Tidak
+> Bagaimana cara membuktikannya salah? Jika hasil pengujian menunjukkan sistem digital tidak menghasilkan peningkatan efektivitas atau penurunan waktu pencarian kurang dari treshold yang ditetapkan.
 
 ---
 
@@ -147,15 +147,15 @@ Lengkapi rantai dari RQ hingga metode analisis.
 
 | Tahap | Isi |
 |-------|-----|
-| RQ | *Contoh: Apakah CNN menghasilkan F1-Score lebih tinggi dari RF...* |
-| Variable (IV) | *Contoh: Jenis algoritma (CNN vs RF)* |
-| Variable (DV) | |
-| Metric | |
-| Data source | |
-| Analysis method | |
+| RQ | Apakah sistem pengarsipan digital meningkatkan efektivitas dibanding sistem manual |
+| Variable (IV) | Metode pengelolaan arsip (manual vs digital) |
+| Variable (DV) | Efektivitas pengelolaan dokumen |
+| Metric | Waktu pencarian, ketersediaan dokumen |
+| Data source | Dokumen akademik Program Studi Sistem Informasi |
+| Analysis method | Perbndingan sebelum-sesudah dan evaluasi sistem|
 
 **Apakah rantai lengkap?** [ ] Ya / [ ] Tidak
-> Jika tidak, tahap mana yang perlu direvisi? ______________
+> Jika tidak, tahap mana yang perlu direvisi?
 
 ---
 
@@ -163,6 +163,6 @@ Lengkapi rantai dari RQ hingga metode analisis.
 
 > Ambil satu judul skripsi/paper yang pernah dibaca. Coba ekstrak RQ-nya. Apakah RQ tersebut memenuhi semua komponen (metode, metrik, baseline, konteks)? Jika tidak, apa yang hilang?
 
-**Judul:** _____________________________________________
-**RQ yang diekstrak:** __________________________________
-**Komponen yang hilang:** _______________________________
+**Judul:** Rancang Bangun Sistem Informasi Pengarsipan Digital (Studi Kasus: Program Studi informasi)
+**RQ yang diekstrak:** Apakah sistem informasi pengarsipan digital dapat meningkatkan efektivitas pengelolaan dokumen akademik?
+**Komponen yang hilang:** Metrik kuantitatif dan evaluasi performa yang lebih terukur
