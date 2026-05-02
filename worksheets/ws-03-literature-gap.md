@@ -77,18 +77,22 @@ Membandingkan deep learning 2024 dengan decision tree sederhana tanpa justifikas
 ```
 LITERATURE MAPPING
 
-Topik      : ____________________
-Database   : ____________________
-Query      : ____________________
-Tahun      : ____________________
-Hasil awal : ____ paper → Screening → ____ paper final
+Topik      : Sistem Informasi Pengarsipan Digital untuk Pengelolaan Dokumen Akademik
+Database   : Google Scholar
+Query      : Sistem informasi pengarsipan digital 
+Tahun      : 2021-2025
+Hasil awal : 15 paper → Screening → 5 paper final
 
 Literature Matrix (concept-centric):
-
+---
 | Study | Tahun | Method | Data | Result | Limitation |
 |-------|-------|--------|------|--------|------------|
+| Karim et al. | 2024 | Web-based archive information system | Dokumen akademik Program Studi SI | mempermudah pengelolaan dan pencarian arsip | Tidak ada evaluasi kuantitatif performa |
 |       |       |        |      |        |            |
-
+|       |       |        |      |        |            |
+|       |       |        |      |        |            |
+|       |       |        |      |        |            |
+---
 Pola yang ditemukan:
   Metode dominan     : ____________________
   Dataset umum       : ____________________
