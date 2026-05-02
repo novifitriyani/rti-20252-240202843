@@ -84,36 +84,37 @@ Tahun      : 2021-2025
 Hasil awal : 15 paper → Screening → 5 paper final
 
 Literature Matrix (concept-centric):
----
+
 | Study | Tahun | Method | Data | Result | Limitation |
 |-------|-------|--------|------|--------|------------|
 | Karim et al. | 2024 | Web-based archive information system | Dokumen akademik Program Studi SI | mempermudah pengelolaan dan pencarian arsip | Tidak ada evaluasi kuantitatif performa |
-|       |       |        |      |        |            |
-|       |       |        |      |        |            |
-|       |       |        |      |        |            |
-|       |       |        |      |        |            |
----
+| Hudawi et al. | 2022 | Framework Codelgniter | Arsip dokumen organisasi | Sistem mempermudah penyimpanan arsip | Implementasi terbatas pada satu instasi |
+| Marlena & Solikin | 2025 | Sistem arsib digital berbasis web | Dokumen PT Kereta Api Indonesia | Pengelolaan asrip lebih efektif | Belum membahas usability pengguna |
+| Ente et al. | 2023 | OCR berbasis web |Dokumen hasil scan | Mempermudah pencarian dokumen digital | Bergantung kualitas sacan dokumen|
+| Sahal & Winardi | 2021 | Sistem pengarsipan digital | Arsip administrasi | Mendukung digitalisasi dokumen | Security System belum optimal |
+
 Pola yang ditemukan:
-  Metode dominan     : ____________________
-  Dataset umum       : ____________________
-  Limitasi berulang  : ____________________
+  Metode dominan     : Sistem informasi pengarsian berbasis web dengan database terintegrasi
+  Dataset umum       : Dokumen akademik, administrasi, surat dan arsip organisasi
+  Limitasi berulang  : Evaluasi sistem masih dominan black box/fungsional, Implementasi hanya pada satu institusi, Belum banyak evaluai usability dan security.
 
 GAP IDENTIFICATION
 
-Gap 1: [Jenis: performance / method / data / context]
-  Deskripsi    : ____________________
-  Bukti        : ____________________
-  Signifikansi : ____________________
+Gap 1: [Jenis: Performance Gap]
+  Deskripsi    : Sebagian besar penelitian berfokus pada implementasi sistem tanpa evaluasi performa yang terukur.
+  Bukti        : Mayoritas paper hanya menguji fungsi tanpa pengukuran kuantitatif seperti kecepatan pencarian dokumen.
+  Signifikansi : Sulit membuktikan efektivitas sistem secara objektif 
 
-Gap 2: [Jenis: ____]
-  Deskripsi    : ____________________
-  Bukti        : ____________________
-  Signifikansi : ____________________
+Gap 2: [Jenis: Context Gap]
+  Deskripsi    : Penelitian umumnya diuji hanya pada satu organisasi atau institusi
+  Bukti        : Seluruh paper menggunakan studi kasus tunggal
+  Signifikansi : Hasil sulit digeneralisasi ke lingkungan berbeda
 
 Baseline Selection:
 | Baseline | Relevansi | Representatif | Source |
 |----------|-----------|---------------|--------|
-|          |           |               |        |
+| Sistem pengarsipan manual | Pembanding kondisi sebelum digitalisasi | Masih digunakan di banyak institusi | Karim et al., 2024 |
+| Sistem pengarsipan web sederhana| Menyelesaikan asalah serupa | Banyak digunakan dalam penelitan sejenis| Hudawi et al., 2022|
 ```
 
 ---
@@ -127,20 +128,20 @@ Gunakan topik riset dari WS-02. Cari minimal 5 paper relevan menggunakan databas
 > - Tulis query Boolean yang digunakan: contoh `("object detection" OR "image classification") AND ("edge computing") NOT ("medical")`. Dokumentasikan query secara eksplisit.
 > - Akses gratis: buka Google Scholar → cari judul paper → klik [PDF] jika tersedia, atau akses lewat campus VPN
 
-**Topik riset:** ________________________________________
-**Query pencarian:** ____________________________________
-**Database:** ___________________________________________
+**Topik riset:** Sistem Informasi Pengarsipan Digital
+**Query pencarian:** Sitem informasi pengarsipan digital
+**Database:** Google Scholar
 
 | # | Study | Tahun | Method | Dataset | Result | Limitasi |
 |---|-------|-------|--------|---------|--------|----------|
-| 1 | *Contoh: Rahman et al.* | *2023* | *CNN* | *ImageNet subset* | *Acc 91%* | *Hanya 3 kelas* |
-| 2 | | | | | | |
-| 3 | | | | | | |
-| 4 | | | | | | |
-| 5 | | | | | | |
+| 1 | Karim et al. | 2024 | Web-based archive system | Dokumen akademik  | Mempermudah arsip digital | Tidak ada evaluasi kuantitatif |
+| 2 | Hudawi et al. | 2022 | Codelgniterb framework | Arsip organisasi | Pengelolaan lebih efisien | Single situation |
+| 3 | Marlena & Solikin | 2025 | Web digital archive | dokumen perusahaan | Efektivitas meningkat | Belum usability analysis |
+| 4 | Ente et al. | 2023 | OCR web-based archive | Scan dokumen | Search lebih mudah | Bergantung kualitas scan |
+| 5 | Sahal & Winardi | 2021 | Digital archiving system | Arsip administrasi | Mendukung digitalisai dokumen | Sistem keamanan belum optimal |
 
-**Pola yang terlihat — Metode dominan:** ___________________
-**Limitasi yang berulang:** ______________________________
+**Pola yang terlihat — Metode dominan:** Sistem informasi pengarsipan berbasis web dengan database terintegrasi
+**Limitasi yang berulang:** Kurangnya evaluasi kuantitatif performa, usability, dan security system
 
 ---
 
@@ -150,14 +151,14 @@ Berdasarkan tabel di Latihan 1, identifikasi gap.
 
 | Jenis Gap | Ditemukan? | Gap Statement |
 |-----------|-----------|---------------|
-| Performance Gap | [ ] Ya / [ ] Tidak | *Contoh: Akurasi turun di bawah 80% untuk kelas minoritas* |
-| Method Gap | [ ] Ya / [ ] Tidak | |
-| Data Gap | [ ] Ya / [ ] Tidak | |
-| Context Gap | [ ] Ya / [ ] Tidak | |
+| Performance Gap | [x] Ya / [ ] Tidak | Belum ada evaluasi performa kuantitatif sistem pengarsipan digital |
+| Method Gap | [ ] Ya / [ ] Tidak | - |
+| Data Gap | [ ] Ya / [ ] Tidak | - |
+| Context Gap | [x] Ya / [ ] Tidak | Studi masih terbatas pada satu institusi |
 
-**Gap utama yang dipilih:** _____________________________
+**Gap utama yang dipilih:** Performance Gap
 **Mengapa gap ini penting (bukan sekadar "belum ada yang meneliti")?**
-> ___________________________________________________
+> Karena sebagian besar penelitian hanya membangun sistem tanpa membuktikan secara terukur bahwa sistem benar-benar meningkatkan efektivitas penglolaan dokumen. 
 
 ---
 
@@ -167,11 +168,11 @@ Pilih 2 baseline dari literatur yang sudah dibaca.
 
 | # | Baseline | Mengapa Relevan | Mengapa Representatif | Apakah SOTA? | Sumber |
 |---|----------|----------------|----------------------|-------------|--------|
-| 1 | *Contoh: RF + TF-IDF* | *Task sama: klasifikasi teks* | *Dipakai 6 dari 10 paper* | *Bukan, tapi common practice* | *Lee et al., 2022* |
-| 2 | | | | | |
+| 1 | Sistem manual | Karena sistem manual adalah kondisi awal sebelum ada digitalisasi arsip | Masih banyak yang menggunakan pengarsipan manual | Bukan | Karim et al., 2024 |
+| 2 | Web archive system sederhana | Karena sama-sama menyelesaikan masalah pengarsipan digital berbasis web | Banyak penelitian serupa menggunakan model web archive system sederhana (CRUD dokumen, database, search) | Bukan | Hudawi et al., 2022|
 
-**Apakah pemilihan baseline ini bisa dianggap straw man?** [ ] Ya / [ ] Tidak
-> Justifikasi: ________________________________________
+**Apakah pemilihan baseline ini bisa dianggap straw man?** [ ] Ya / [x] Tidak
+> Justifikasi: Baseline dipilih karena relevan dengan masalah yang sama dan mewakili praktik umum pada pengelolaan arsip dokumen  
 
 ---
 
@@ -180,5 +181,4 @@ Pilih 2 baseline dari literatur yang sudah dibaca.
 > Apa perbedaan antara "belum ada yang meneliti ini" (klaim tanpa bukti) dengan research gap yang valid? Bagaimana cara membuktikan bahwa sebuah gap benar-benar ada?
 
 **Jawaban:**
-> ___________________________________________________
-> ___________________________________________________
+> Klaim "belum ada yang meneliti ini" tidak cukup tanpa bukti pencarian literatur. Research gap yang valid harus dibuktikan melalui pencarian sistematis, analisis beberapa paper, serta identifikasi pola keterbatasan yang konsisten.
