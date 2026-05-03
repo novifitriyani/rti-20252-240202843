@@ -66,19 +66,19 @@ Metrik harus ditentukan **sebelum** eksperimen. Memilih metrik setelah melihat d
 ```
 VARIABLE & METRIC DEFINITION
 
-Research Question: ____________________
+Research Question: Apakah implementasi sistem informasi pengarsipan digital berbasis web dapat meningkatkan efektivitas pencarian dan pengelolaan dokumen dibandingkan sistem manual pada Program Studi Informasi?
 
 | Variabel | Tipe | Konsep | Metrik | Skala | Satuan | Cara Mengukur | Justifikasi |
 |----------|------|--------|--------|-------|--------|---------------|-------------|
-|          | IV   |        |        |       |        |               |             |
-|          | DV   |        |        |       |        |               |             |
-|          | CV   |        |        |       |        |               |             |
+| Metode pengelolaan arsip | IV | Pendekatan pengarsipan | Manual vs Digital | Nominal | - | Identifikasi jenis sistem yang digunakan | Membedakan perlakuan eksperimen |
+| Efektivitas pencarian dokumen | DV | Efisiensi pengelolaan dokumen | Waktu pencarian dokumen | ratio | Menit | Mengukur lama waktu menemukan dokumen | Langsung merepresentasikan efisiensi |
+| Jenis dokumen | CV   | Kompleksitas pencarian | Dokumen akademik/administrasi | Nominal |        | - | Mengelompokkan tipe dokumen | Mengontrol variasi hasil |
 
 Alignment Check:
   RQ → Concept → Variable → Metric → Data → Result
-  [ ] Setiap langkah terdokumentasi
-  [ ] Tidak ada "lompatan logis"
-  [ ] Metrik mengukur apa yang dimaksud (construct validity)
+  [x] Setiap langkah terdokumentasi
+  [x] Tidak ada "lompatan logis"
+  [x] Metrik mengukur apa yang dimaksud (construct validity)
 ```
 
 ---
@@ -87,7 +87,7 @@ Alignment Check:
 
 Gunakan RQ dari WS-04. Definisikan variabel dan metriknya.
 
-**RQ:** __________________________________________________
+**RQ:** Apakah implementasi sistem informasi pengarsipan digital berbasis web dapat meningkatkan efektivitas pencarian dan pengelolaan dokumen dibandingkan sistem manual?
 
 | Variabel | Tipe | Konsep Abstrak | Metrik Konkret | Skala (NOIR) | Satuan |
 |----------|------|---------------|----------------|-------------|--------|
