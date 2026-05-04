@@ -102,7 +102,7 @@ Pilih satu paper riset di bidang TI yang mengklaim "metode X meningkatkan perfor
 | Reality → Data | Mengamati masalah pengarsipan manual di Program Studi Sistem Informasi yang menyebabkan kesulitan pencarian dan kehilangan dokumen | Data hanya berasal dari satu institusi → tidak mewakili kondisi umum (sampling bias) |
 | Data → Processing | Data arsip dikonversi ke sistem digital menggunakan database (PHP & MySQL) | Kesalahan input data (human error) dan tidak ada validasi kualitas data |
 | Processing → Analysis | Sistem diuji menggunakan metode black box testing untuk memastikan fungsi berjalan | Pengujian hanya fungsional, tidak mengukur performa nyata (tidak ada metrik kuantitatif seperti waktu/akurasi)  |
-| Analysis → Inference | Disimpulkan bahwa sistem meningkatkan efisiensi, kecepatan, dan kemudahan pengarsipan | Klaim tidak didukung perbandingan dengan sistem lain (tidak ada baseline → weak interface) |
+| Analysis → Inference | Disimpulkan bahwa sistem meningkatkan efisiensi, kecepatan, dan kemudahan pengarsipan | Klaim tidak didukung perbandingan dengan sistem lain karena tidak ada baseline pembanding |
 | Inference → Knowledge | Pengetahuan yang dihasilkan: sistem digital lebih efektif dibanding sistem manual | Generelisasi terlalu luas, padahal hanya diuji pada satu studi kasus (external validity rendah) |
 
 **Distorsi paling besar di tahap:** Analysis → Interface
