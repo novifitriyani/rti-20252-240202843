@@ -91,12 +91,11 @@ Gunakan RQ dari WS-04. Definisikan variabel dan metriknya.
 
 | Variabel | Tipe | Konsep Abstrak | Metrik Konkret | Skala (NOIR) | Satuan |
 |----------|------|---------------|----------------|-------------|--------|
-| *Contoh: Jenis model* | *IV* | *Pendekatan klasifikasi* | *Categorical: CNN vs RF* | *Nominal* | *—* |
-| | DV | | | | |
-| | CV | | | | |
+| Metode pengelolaan arsip | IV | Pendekatan pengarsipan | Manual vs Digital | Nominal | — |
+| Efektivitas pencarian dokumen | DV | Efisiensi pengelolaan | Lama waktu pencarian dokumen | Ratio | Menit |
+| Jenis dokumen | CV | Variasi dokumen | Akademik vs Administrasi | Nominal | - |
 
-**Apakah ada lompatan logis dalam rantai?** [ ] Ya / [ ] Tidak
-> Jika ya, di mana? ____________________________________
+**Apakah ada lompatan logis dalam rantai?** [ ] Ya / [x] Tidak
 
 ---
 
@@ -106,15 +105,15 @@ Evaluasi metrik DV yang dipilih di Latihan 1 menggunakan 3 kriteria.
 
 | Kriteria | Skor (1-5) | Justifikasi |
 |----------|-----------|-------------|
-| Representative | *Contoh: 4 — F1-Score mewakili keseimbangan precision-recall* | |
-| Sensitive | | |
-| Feasible | | |
+| Representative | 5 | Waktu pencarian dokumen secara langsung mengukur efisiensi sistem |
+| Sensitive | 4 | Perbedaan kecil waktu masih dapat diamati |
+| Feasible | 5 | Data mudah dikumpulkan melalui simulasi pencarian dokumen |
 
-**Apakah perlu secondary metric?** [ ] Ya / [ ] Tidak
-> Jika ya, apa dan mengapa? _____________________________
+**Apakah perlu secondary metric?** [x] Ya / [ ] Tidak
+> Jika ya, apa dan mengapa? Kemudahan penggunaan sistem (user satisfaction) sebagai pendukung untuk melihat pengalaman pengguna selain efisiensi waktu.
 
 **Contoh kasus ceiling effect untuk metrik ini:**
-> ___________________________________________________
+> Jika seluruh pengguna dapat menemukan dokumen dalam waktu yang sangat cepat, maka perbedaan performa antar sistem menjadi sulit dibedakan.
 
 ---
 
@@ -124,10 +123,10 @@ Bayangkan data yang akan dikumpulkan dari eksperimen. Evaluasi 4 dimensi kualita
 
 | Dimensi | Pertanyaan | Jawaban | Strategi Mitigasi |
 |---------|-----------|---------|------------------|
-| Completeness | *Apakah semua data point terkumpul?* | | |
-| Consistency | *Apakah ada kontradiksi internal?* | | |
-| Validity | *Apakah benar-benar mengukur yang dimaksud?* | | |
-| Representativeness | *Apakah sampel mewakili populasi target?* | | |
+| Completeness | *Apakah semua data point terkumpul?* | Ya, seluruh percobaan dicatat | Checklist pengumpulan data |
+| Consistency | *Apakah ada kontradiksi internal?* | Tidak | Standarisasi prosedur pengukuran |
+| Validity | *Apakah benar-benar mengukur yang dimaksud?* | Ya, waktu pencarian merepresentasikan efisiensi | Menggunakan prosedur pengukuran yang sama |
+| Representativeness | *Apakah sampel mewakili populasi target?* | Cukup mewakili dokumen akademik | Menggunakan berbagai tipe dokumen |
 
 ---
 
@@ -136,5 +135,4 @@ Bayangkan data yang akan dikumpulkan dari eksperimen. Evaluasi 4 dimensi kualita
 > Mengapa memilih metrik setelah melihat data dianggap p-hacking? Apa bedanya dengan eksplorasi data yang sah?
 
 **Jawaban:**
-> ___________________________________________________
-> ___________________________________________________
+> Memilih metrik setelah melihat data dianggap p-hacking karena peneliti dapat melihat hasil yang paling menguntungkan sehingga mengurangi objektivitas penelitian. Berbeda dengan eksplorasi data yang sah, yaitu analisis tambahan yang dilakukan setelah eksperimen namun dilaporkan secara transparan sebagai exploratory analysis. 
