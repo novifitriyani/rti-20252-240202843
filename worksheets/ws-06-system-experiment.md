@@ -80,43 +80,43 @@ Jika variabel tidak bisa di-map ke komponen apapun → arsitektur perlu didesain
 ```
 SYSTEM-EXPERIMENT MAPPING
 
-Research Question: ____________________
+Research Question: Apakah implementasi sistem informasi pengarsipan digital berbasis web dapat menurunkan waktu pencarian dokumen dibandingkan sistem manual pada dokumen akademik Program Studi Sistem Informasi?
 
 Variable → Component Mapping:
 | Variabel | Tipe | Komponen Sistem | Cara Manipulasi/Pengukuran |
 |----------|------|-----------------|---------------------------|
-|          | IV   |                 |                           |
-|          | DV   |                 |                           |
-|          | CV   |                 |                           |
+| Metode pengarsipan | IV | Mode sistem (manual vs sistem informasi pengarsipan digital) | Pergantian antara sistem manual dan sistem berbasis web |
+| Waktu pencarian dokumen | DV | Modul pencarian + logging system | Mengukur waktu dari input pencarian hingga hasil tampil (detik) |
+| Jenis dokumen | CV | Database arsip akademik | Menstandarkan jenis dan jumlah dokumen saat eksperimen |
 
 4 Prinsip Desain:
-  [ ] Traceability — Setiap komponen bisa ditelusuri ke variabel
-  [ ] Variable Isolation — IV bisa diubah tanpa mengubah CV
-  [ ] Measurement Integration — Pengukuran DV built-in
-  [ ] Reproducibility — Setup bisa direkonstruksi
+  [x] Traceability — Setiap komponen sistem dapat ditelusuri ke variabel penelitian (IV, DV, CV)
+  [x] Variable Isolation — Variabel metode pengarsipan dapat diubah tanpa memengaruhi variabel kontrol (jenis dokumen tetap)
+  [x] Measurement Integration — Pengukuran waktu pencarian dilakukan otomatis melalui logging system
+  [x] Reproducibility — Eksperimen dapat diulang dengan dataset dan prosedur yang sama
 
 Experimental Setup:
-  Input data     : ____________________
-  Parameter      : ____________________
-  Output format  : ____________________
+  Input data     : Dataset dokumen arsip akademik Program Studi Sistem Informasi (manual dan digital) dengan jenis dan jumlah yang distandarisasi
+  Parameter      : Metode pengarsipan (manual vs sistem informasi pengarsipan digital)
+  Output format  : Waktu pencarian dokumen (detik) dan hasil perbandingan performa (manual vs digital)
 ```
-
+ 
 ---
 
 ## Latihan 1 — Variable-to-Component Mapping
 
 Gunakan RQ dan variabel dari WS-05. Petakan ke komponen sistem.
 
-**RQ:** __________________________________________________
+**RQ:** Apakah implementasi sistem informasi pengarsipan digital berbasis web dapat menurunkan waktu pencarian dokumen dibandingkan sistem manual?
 
 | Variabel | Tipe | Komponen Sistem | Cara Manipulasi / Pengukuran |
 |----------|------|-----------------|---------------------------|
-| *Contoh: Jenis model* | *IV* | *Modul classifier (swap RF ↔ CNN)* | *Ganti config `model_type`* |
-| | DV | | |
-| | CV | | |
+| Metode pengarsipan | IV | Mode sistem (manual vs digital) | Mengganti sistem yang digunakan |
+| Waktu pencarian dokumen | DV | Modul pencarian + logging waktu | Stopwatch/log otomatis dari sistem |
+| Jenis dokumen | CV | Database arsip | Disamakan jumlah dan jenis dokumen |
 
-**Apakah semua variabel bisa di-map?** [ ] Ya / [ ] Tidak
-> Jika tidak, komponen apa yang perlu ditambahkan? _________
+**Apakah semua variabel bisa di-map?** [x] Ya / [ ] Tidak
+> Jika tidak, komponen apa yang perlu ditambahkan?
 
 ---
 
@@ -126,14 +126,14 @@ Evaluasi desain sistem terhadap 4 prinsip.
 
 | Prinsip | Status | Bukti / Penjelasan |
 |---------|--------|-------------------|
-| Traceability | *Contoh: ✅ — setiap modul punya label variabel* | |
-| Modularity | | |
-| Controllability | | |
-| Measurability | | |
+| Traceability | ✅ | Setiap variabel terhubung langsung ke modul sistem |
+| Modularity | ✅ | Sistem manual vs digital dapat diuji terpisah |
+| Controllability | ✅ | Dataset dan jenis dokumen dikontrol sama |
+| Measurability | ✅ | Waktu pencarian otomatis tercatat oleh sistem |
 
-**Prinsip mana yang paling sulit dipenuhi?** _______________
+**Prinsip mana yang paling sulit dipenuhi?** Controllability
 **Strategi untuk mengatasinya:**
-> ___________________________________________________
+> Menyamakan dataset (jenis, jumlah, dan format dokumen)
 
 ---
 
@@ -146,14 +146,14 @@ Jika sistem memiliki 3 komponen utama, rencanakan ablation study.
 
 | Kondisi | Komponen A | Komponen B | Komponen C | Hasil yang Diharapkan |
 |---------|-----------|-----------|-----------|----------------------|
-| Full | *Contoh: ✅ CNN* | *Contoh: ✅ Temporal features* | *Contoh: ✅ Z-score norm* | *Baseline penuh* |
-| – A | ❌ (ganti RF) | ✅ | ✅ | |
-| – B | ✅ | ❌ (tanpa temporal) | ✅ | |
-| – C | ✅ | ✅ | ❌ (tanpa normalisasi) | |
+| Full | Digital | ✅ | ✅ | Performa terbaik |
+| – A | Manual | ✅ | ✅ | Lebih lambat |
+| – B | Digital | ❌ | ✅ | Tidak bisa research optimal |
+| – C | Digital | ✅ | ❌ | Tidak bisa ukur waktu |
 
-**Komponen mana yang diprediksi paling berkontribusi?** _____
+**Komponen mana yang diprediksi paling berkontribusi?** Metode pengarsipan (manual vs digital)
 **Mengapa?**
-> ___________________________________________________
+> karena langsung mempengaruhi efisiensi waktu pencarian dokumen
 
 ---
 
@@ -162,5 +162,4 @@ Jika sistem memiliki 3 komponen utama, rencanakan ablation study.
 > Apa risiko jika sistem dibangun seperti produk (monolitik, fitur lengkap) lalu baru dilakukan eksperimen? Mengapa arsitektur modular penting untuk riset?
 
 **Jawaban:**
-> ___________________________________________________
-> ___________________________________________________
+> Jika sistem dibangun seperti produk terlebih dahulu tanpa desain eksperimen, maka seluruh fitur akan bercampur sehingga sulit mengisolasi variabel penelitian. Oleh karena itu, arsitektur modular penting agar setiap variabel dapat diuji secara terpisah, hasil penelitian menjadi valid, terukur, dan dapat direproduksi.
