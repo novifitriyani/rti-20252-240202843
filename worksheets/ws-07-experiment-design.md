@@ -68,8 +68,10 @@ Ancaman validitas harus diidentifikasi **sebelum** eksperimen dan mitigasinya di
 ```
 EXPERIMENT DESIGN
 
-Research Question : ____________________
-Hypothesis        : ____________________
+Research Question : Apakah implementasi sistem informasi pengarsipan digital berbasis web dapat menurunkan waktu pencarian dokumen dibandingkan sistem manual pada dokumen akademik Program Studi Sistem Informasi?
+Hypothesis        : 
+- H₀: Tidak terdapat perbedaan signifikan waktu pencarian dokumen antara sistem manual dan sistem pengarsipan digital,
+- H₁: Terdapat penurunan waktu pencarian dokumen pada sistem pengarsipan digital dibandingkan sistem manual
 Tipe Eksperimen   : [ ] Comparison  [ ] Ablation  [ ] Parameter
 
 Kondisi Eksperimen:
