@@ -69,36 +69,37 @@ Ancaman validitas harus diidentifikasi **sebelum** eksperimen dan mitigasinya di
 EXPERIMENT DESIGN
 
 Research Question : Apakah implementasi sistem informasi pengarsipan digital berbasis web dapat menurunkan waktu pencarian dokumen dibandingkan sistem manual pada dokumen akademik Program Studi Sistem Informasi?
-Hypothesis        : - H₀: Tidak terdapat perbedaan signifikan waktu pencarian dokumen antara sistem manual dan sistem pengarsipan digital
+Hypothesis        :
+- H₀: Tidak terdapat perbedaan signifikan waktu pencarian dokumen antara sistem manual dan sistem pengarsipan digital
 - H₁: Terdapat penurunan waktu pencarian dokumen pada sistem pengarsipan digital dibandingkan sistem manual
-Tipe Eksperimen   : [ ] Comparison  [ ] Ablation  [ ] Parameter
+Tipe Eksperimen   : [x] Comparison  [ ] Ablation  [ ] Parameter
 
 Kondisi Eksperimen:
 | Kondisi | Deskripsi | IV Value | CV Settings |
 |---------|-----------|----------|-------------|
-| Control |           |          |             |
-| Treatment |         |          |             |
+| Control | Sistem manual pengarsipan | Manual | Dataset dokumen akademik sama, jumlah & jenis sama, seed/urutan sama |
+| Treatment | Sistem informasi pengarsipan digital berbasis web | Digital | Dataset dokumen akademik sama, preprocessing sama, lingkungan pengujian sama |
 
 Fairness Checklist:
-  [ ] Dataset identik untuk semua kondisi
-  [ ] Preprocessing setara
-  [ ] Tuning effort setara
-  [ ] Environment identik
-  [ ] Metrik evaluasi sama
+  [x] Dataset identik 
+  [x] Preprocessing setara
+  [x] Tuning effort setara
+  [x] Environment identik
+  [x] Metrik evaluasi sama
 
 Threat Analysis:
 | Threat Type | Ancaman Spesifik | Mitigasi |
 |-------------|-----------------|----------|
-| Internal    |                 |          |
-| External    |                 |          |
-| Construct   |                 |          |
-| Conclusion  |                 |          |
+| Internal    | User familiarity (bias karena sudah terbiasa dengan sistem digital) | Gunakan prosedur uji berulang dan randomisasi urutan pengujian |
+| External    | Dataset hanya dari satu program studi | Perluasan dataset ke instansi lain jika penelitian lanjutan |
+| Construct   | Waktu pencarian tidak sepenuhnya merepresentasikan “efisiensi” | Tambahkan metrik pendukung seperti success rate pencarian |
+| Conclusion  | Jumlah sampel terlalu kecil | Gunakan repeated trials (beberapa kali percobaan) |
 
 Statistical Plan:
-  Uji statistik   : ____________________
-  Justifikasi      : ____________________
-  Alpha            : ____________________
-  Effect size min  : ____________________
+  Uji statistik   : Paired t-test
+  Justifikasi      : Membandingkan dua kondisi (manual vs digital) pada dataset yang sama
+  Alpha            : 0.05
+  Effect size min  : Penurunan waktu 20% dianggap signifikan secara praktis
 ```
 
 ---
@@ -107,13 +108,14 @@ Statistical Plan:
 
 Susun desain eksperimen berdasarkan RQ, variabel, dan sistem dari WS-04 sampai WS-06.
 
-**RQ:** __________________________________________________
-**Tipe eksperimen:** [ ] Comparison / [ ] Ablation / [ ] Parameter
+**RQ:** Apakah implementasi sistem informasi pengarsipan digital berbasis web dapat menurunkan waktu pencarian dokumen dibandingkan sistem manual?
+
+**Tipe eksperimen:** [x] Comparison / [ ] Ablation / [ ] Parameter
 
 | Kondisi | Deskripsi | IV Value | CV Settings |
 |---------|-----------|----------|-------------|
-| Control | *Contoh: RF baseline dari literatur* | *RF* | *Dataset X, 80:20 split, seed 42* |
-| Treatment | | | |
+| Control | Sistem manual pengarsipan  | Manual | Dataset sama, urutan dokumen sama, environment sama |
+| Treatment | Sistem pengarsipan digital | Digital | Dataset sama, preprocessing sama, environment sama |
 
 ---
 
@@ -123,14 +125,14 @@ Evaluasi apakah desain eksperimen di Latihan 1 sudah fair.
 
 | Kriteria | Status | Detail |
 |----------|--------|--------|
-| Dataset identik | *Contoh: ✅ — sama-sama pakai CIC-MalMem-2022* | |
-| Preprocessing setara | | |
-| Tuning effort setara | | |
-| Environment identik | | |
-| Metrik evaluasi sama | | |
+| Dataset identik | ✅ | Mengunakan dokumen arsip yang sama |
+| Preprocessing setara | ✅ | Format data sama sebelum pengujian |
+| Tuning effort setara | ✅ | Tidak ada optimasi khusus salah atau sistem |
+| Environment identik | ✅ | Hardware dan software sama |
+| Metrik evaluasi sama | ✅ | Waktu pencarian (detik) |
 
-**Ada yang tidak fair?** [ ] Ya / [ ] Tidak
-> Jika ya, bagaimana cara memperbaikinya? ________________
+**Ada yang tidak fair?** [ ] Ya / [x] Tidak
+> Jika ya, bagaimana cara memperbaikinya?
 
 ---
 
@@ -140,14 +142,14 @@ Identifikasi ancaman validitas untuk desain eksperimen ini.
 
 | Threat Type | Ancaman Spesifik | Mitigasi |
 |-------------|-----------------|----------|
-| Internal | *Contoh: Data leakage antara train-test* | *Contoh: Gunakan stratified split, validasi tidak ada overlap* |
-| External | | |
-| Construct | | |
-| Conclusion | | |
+| Internal | Bias pengguna karena familiar dengan sistem digital | Randomisasi urutan uji + training singkat |
+| External | Data hanya dari satu institusi | Perlu ekspansi dataset di penelitian lanjutan |
+| Construct | Efisiensi tidak hanya diukur dari waktu | Tambahkan metrik tambahan (succes rate) |
+| Conclusion | Sampel uji terlalu sedikit | Gunakan repeated measurement (beberapa percobaan) |
 
-**Ancaman mana yang paling sulit dimitigasi?** _____________
+**Ancaman mana yang paling sulit dimitigasi?** External validity
 **Mengapa?**
-> ___________________________________________________
+> Karena dataset penelitian hanya berasal dari satu program studi sistem informasi, sehingga hasil penelitian belum tentu dapat digeneralisasi ke institusi atau lingkungan lain dengan karakteristik dokumen yang berbeda 
 
 ---
 
@@ -156,6 +158,6 @@ Identifikasi ancaman validitas untuk desain eksperimen ini.
 > Sebuah paper melaporkan "metode kami mengalahkan semua baseline." Apa 3 pertanyaan pertama yang harus diajukan untuk mengevaluasi klaim ini?
 
 **Jawaban:**
-1. ___________________________________________________
-2. ___________________________________________________
-3. ___________________________________________________
+1. Apakah baseline yang digunakan relevan dan benar-benar mewakili metode pemanding yang umum digunakan?
+2. Apakah dataset, preprocessing, dan environment pengujian dibuat sama untuk semua metode?
+3. Apakah hasil perbandingan diuji menggunakan metrik dan uji statistik yang valid?
