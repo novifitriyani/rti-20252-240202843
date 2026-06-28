@@ -125,10 +125,10 @@ Evaluasi apakah desain eksperimen di Latihan 1 sudah fair.
 
 | Kriteria | Status | Detail |
 |----------|--------|--------|
-| Dataset identik | ✅ | Mengunakan dokumen arsip yang sama |
+| Dataset identik | ✅ | Menggunakan dokumen arsip yang sama |
 | Preprocessing setara | ✅ | Format data sama sebelum pengujian |
-| Tuning effort setara | ✅ | Tidak ada optimasi khusus salah atau sistem |
-| Environment identik | ✅ | Hardware dan software sama |
+| Tuning effort setara | ✅ | Tidak ada optimasi khusus pada salah satu sistem |
+| Environment identik | ✅ | Perangkat keras (Hardware) dan Perangkat lunak (software) yang digunakan sama |
 | Metrik evaluasi sama | ✅ | Waktu pencarian (detik) |
 
 **Ada yang tidak fair?** [ ] Ya / [x] Tidak
@@ -144,12 +144,12 @@ Identifikasi ancaman validitas untuk desain eksperimen ini.
 |-------------|-----------------|----------|
 | Internal | Bias pengguna karena familiar dengan sistem digital | Randomisasi urutan uji + training singkat |
 | External | Data hanya dari satu institusi | Perlu ekspansi dataset di penelitian lanjutan |
-| Construct | Efisiensi tidak hanya diukur dari waktu | Tambahkan metrik tambahan (succes rate) |
+| Construct | Efisiensi tidak hanya diukur dari waktu | Tambahkan metrik tambahan (success rate) |
 | Conclusion | Sampel uji terlalu sedikit | Gunakan repeated measurement (beberapa percobaan) |
 
 **Ancaman mana yang paling sulit dimitigasi?** External validity
 **Mengapa?**
-> Karena dataset penelitian hanya berasal dari satu program studi sistem informasi, sehingga hasil penelitian belum tentu dapat digeneralisasi ke institusi atau lingkungan lain dengan karakteristik dokumen yang berbeda 
+> Karena dataset penelitian hanya berasal dari satu Program Studi Sistem Informasi, hasil penelitian belum tentu dapat digeneralisasikan ke institusi atau lingkungan lain yang memiliki karakteristik dokumen berbeda 
 
 ---
 
@@ -158,6 +158,6 @@ Identifikasi ancaman validitas untuk desain eksperimen ini.
 > Sebuah paper melaporkan "metode kami mengalahkan semua baseline." Apa 3 pertanyaan pertama yang harus diajukan untuk mengevaluasi klaim ini?
 
 **Jawaban:**
-1. Apakah baseline yang digunakan relevan dan benar-benar mewakili metode pemanding yang umum digunakan?
+1. Apakah baseline yang digunakan relevan dan benar-benar mewakili metode pembanding yang umum digunakan?
 2. Apakah dataset, preprocessing, dan environment pengujian dibuat sama untuk semua metode?
-3. Apakah hasil perbandingan diuji menggunakan metrik dan uji statistik yang valid?
+3. Apakah hasil perbandingan diuji menggunakan metrik evaluasi dan uji statistik yang valid?
