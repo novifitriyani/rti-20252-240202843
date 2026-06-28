@@ -73,24 +73,24 @@ Jika ada lompatan (section B tidak menjawab pertanyaan section A), red thread pu
 PROPOSAL INTEGRATION CHECKLIST
 
 Koneksi Vertikal (Flow Atas-Bawah):
-  [ ] Problem → Gap: masalah terdokumentasi di literatur
-  [ ] Gap → RQ: pertanyaan menjawab gap spesifik
-  [ ] RQ → Hypothesis: hipotesis memprediksi jawaban
-  [ ] Hypothesis → Metric: metrik mengukur variabel dalam hipotesis
-  [ ] Metric → System: komponen sistem menghasilkan/mengukur metrik
-  [ ] System → Experiment: desain eksperimen menggunakan sistem
+  [X] Problem → Gap: masalah terdokumentasi di literatur
+  [X] Gap → RQ: pertanyaan menjawab gap spesifik
+  [X] RQ → Hypothesis: hipotesis memprediksi jawaban
+  [X] Hypothesis → Metric: metrik mengukur variabel dalam hipotesis
+  [X] Metric → System: komponen sistem menghasilkan/mengukur metrik
+  [X] System → Experiment: desain eksperimen menggunakan sistem
 
 Koneksi Horizontal (Konsistensi):
-  [ ] Istilah sama di semua bagian
-  [ ] Variabel di RQ = variabel di hipotesis = metrik di desain
-  [ ] Scope tidak berubah dari masalah ke eksperimen
+  [X] Istilah sama di semua bagian
+  [X] Variabel di RQ = variabel di hipotesis = metrik di desain
+  [X] Scope tidak berubah dari masalah ke eksperimen
 
 Cognitive Trap Checklist:
-  [ ] Tidak ada paragraf "promosi" di pendahuluan (hanya data & gap)
-  [ ] Metodologi disesuaikan ke RQ, bukan copy-paste textbook
-  [ ] Timeline sudah ditambah buffer 30-50% dari estimasi awal
-  [ ] Proposal mengakui kemungkinan H0 tidak ditolak (honest uncertainty)
-  [ ] Tidak ada klaim "pasti berhasil" atau "meningkatkan signifikan"
+  [X] Tidak ada paragraf "promosi" di pendahuluan (hanya data & gap)
+  [X] Metodologi disesuaikan ke RQ, bukan copy-paste textbook
+  [X] Timeline sudah ditambah buffer 30-50% dari estimasi awal
+  [X] Proposal mengakui kemungkinan H0 tidak ditolak (honest uncertainty)
+  [X] Tidak ada klaim "pasti berhasil" atau "meningkatkan signifikan"
 
 Rubrik Self-Assessment:
 | Kriteria     | 1 (Lemah)                                        | 2 (Cukup)                                     | 3 (Baik)                                           | Skor |
