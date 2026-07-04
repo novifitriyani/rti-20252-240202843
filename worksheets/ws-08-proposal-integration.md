@@ -109,13 +109,13 @@ Kumpulkan hasil dari WS-02 sampai WS-07 menjadi satu ringkasan proposal.
 
 | Komponen | Sumber | Isi (1-2 kalimat) |
 |----------|--------|-------------------|
-| Problem Statement | WS-02 | *Contoh: Sistem rekomendasi memiliki akurasi tinggi (RMSE 0.87) tetapi satisfaction score rendah (45/100). Gap antara metrik teknis dan kepuasan pengguna belum diteliti.* |
-| Gap | WS-03 | *Contoh: Tidak ada studi yang mengintegrasikan collaborative filtering dengan user-context signals untuk meningkatkan satisfaction.* |
-| RQ | WS-04 | *Contoh: Apakah penambahan context-aware signals pada collaborative filtering meningkatkan satisfaction score tanpa menurunkan RMSE?* |
-| Hipotesis | WS-04 | *Contoh: H₁: Sistem CF+context menghasilkan satisfaction ≥ 70/100 dengan RMSE ≤ 0.90 dibanding baseline CF murni.* |
-| Variabel & Metrik | WS-05 | *Contoh: IV = jenis sistem (CF vs CF+context); DV = satisfaction score (skala 0-100) + RMSE (regresi).* |
-| Sistem | WS-06 | |
-| Desain Eksperimen | WS-07 | |
+| Problem Statement | WS-02 | Pengelolaan arsip masih dilakukan secara manual sehingga proses pencarian dokumen kurang efisien, membutuhkan waktu lebih lama, dan berisiko kehilangan data. |
+| Gap | WS-03 | Sebagian besar penelitian hanya berfokus pada implementasi sistem dan pengujian fungsional, belum melakukan evaluasi performa kuantitatif serta masih terbatas pada satu institusi. |
+| RQ | WS-04 | Apakah implementasi sistem informasi pengarsipan digital berbasis web dapat menurunkan waktu pencarian dokumen dibandingkan sistem manual pada dokumen akademik Program Studi Sistem Informasi? |
+| Hipotesis | WS-04 | H₁: Sistem informasi pengarsipan digital berbasis web dapat menurunkan waktu pencarian dokumen dibandingkan sistem manual. |
+| Variabel & Metrik | WS-05 | IV = metode pengelolaan arsip (manual vs digital); DV = waktu pencarian dokumen (detik); CV = jenis dokumen akademik; metrik utama adalah waktu pencarian dokumen. |
+| Sistem | WS-06 | Sistem berbasis web yang menyediakan fitur unggah, penyimpanan, dan pencarian dokumen untuk mengukur waktu pencarian secara konsisten. |
+| Desain Eksperimen | WS-07 | Comparison Study antara sistem manual dan sistem digital menggunakan dataset yang sama, metrik waktu pencarian, serta uji statistik Paired t-test. |
 
 ---
 
@@ -125,20 +125,18 @@ Verifikasi 6 koneksi kritis. Isi dengan merujuk tabel di Latihan 1.
 
 | Koneksi | Status | Bukti |
 |---------|--------|-------|
-| Problem → Gap | *Contoh: ✅ — gap muncul dari 15 paper Bab 3 yang tidak ada yang mengkombinasikan CF + context untuk satisfaction* | |
-| Gap → RQ | *Contoh: ✅ — RQ langsung menanyakan apakah CF+context meningkatkan satisfaction* | |
-| RQ → Hypothesis | *Contoh: ✅ — H₁ memprediksi satisfaction ≥ 70 dengan threshold RMSE ≤ 0.90* | |
-| Hypothesis → Metric | | |
-| Metric → System | | |
-| System → Experiment | | |
+| Problem → Gap | ✅ | Masalah pengelolaan arsip manual diperkuat oleh hasil literature review yang menunjukkan masih minim evaluasi performa sistem. |
+| Gap → RQ | ✅ | RQ secara langsung menjawab gap dengan menguji penurunan waktu pencarian dokumen. |
+| RQ → Hypothesis | ✅ | H₁ memprediksi bahwa sistem digital memberikan waktu pencarian yang lebih cepat dibandingkan sistem manual. |
+| Hypothesis → Metric | ✅ | Hipotesis diuji menggunakan metrik waktu pencarian dokumen (detik). |
+| Metric → System | ✅ | Sistem mencatat dan menghasilkan data waktu pencarian dokumen sebagai hasil pengukuran. |
+| System → Experiment | ✅ | Sistem digunakan sebagai media eksperimen untuk membandingkan metode manual dan digital. |
 
-**Koneksi mana yang paling lemah?** _______________________
+**Koneksi mana yang paling lemah?** Tidak ada koneksi yang lemah karena seluruh komponen sudah saling mendukung.
 **Bagaimana cara memperkuatnya?**
-> ___________________________________________________
+> Menambah jumlah dataset serta memperluas objek penelitian ke beberapa institusi agar hasil penelitian lebih dapat digenerelisasikan.
 
-**Konsistensi horizontal — apakah istilah dan scope konsisten?** [ ] Ya / [ ] Tidak
-> Jika tidak, di bagian mana terjadi inkonsistensi? _________
-
+**Konsistensi horizontal — apakah istilah dan scope konsisten?** [X] Ya / [ ] Tidak
 ---
 
 ## Latihan 3 — Rubrik Self-Assessment
@@ -147,24 +145,21 @@ Evaluasi proposal mini menggunakan rubrik.
 
 | Kriteria | Skor (1-3) | Justifikasi |
 |----------|-----------|-------------|
-| Koherensi | *Contoh: 2 — koneksi gap→RQ masih lemah karena gap belum cukup narrow* | |
-| Specificity | *Contoh: 3 — metrik (satisfaction 0-100, RMSE) sudah terdefinisi numerik* | |
-| Feasibility | | |
-| Rigor | | |
+| Koherensi | 3 | Problem, gap, RQ, hipotesis, variabel, sistem, dan eksperimen saling terhubung dengan baik. |
+| Specificity | 3 | Variabel, metrik, threshold, dan metode pengukuran telah ditentukan secara jelas. |
+| Feasibility | 3 | Penelitian realistis dilakukan dalam waktu skripsi dengan sumber daya yang tersedia. |
+| Rigor | 3 | Baseline, metode eksperimen, serta uji statistik telah ditentukan berdasarkan hasil kajian literatur. |
 
-**Skor total:** _____ / 12
+**Skor total:** 12 / 12
 
-**Apakah proposal siap untuk fase eksekusi?** [ ] Ya / [ ] Belum
-> Jika belum, apa yang perlu diperbaiki? __________________
-
+**Apakah proposal siap untuk fase eksekusi?** [X] Ya / [ ] Belum
 ---
 
 ## Refleksi
 
 > Dari seluruh proses WS-01 sampai WS-08, bagian mana yang paling mudah dan paling sulit? Mengapa? Apa yang akan dilakukan berbeda jika mengulang dari awal?
 
-**Bagian termudah:** ____________________________________
-**Bagian tersulit:** ____________________________________
+**Bagian termudah:** Menentukan variabel penelitian dan metrik pengukuran karena sudah mengacu pada Research Question yang telah dirumuskan.
+**Bagian tersulit:** Mengidentifikasi research gap dari literatur karena harus membandingkan beberapa penelitian dan menemukan kekurangan yang benar-benar didukung bukti.
 **Yang akan dilakukan berbeda:**
-> ___________________________________________________
-> ___________________________________________________
+> Jika mengulang dari awal, saya akan melakukan pencarian literatur secara lebih sistematis sejak awal dan menyusun referensi berdasarkan tema agar proses identifikasi research gap menjadi lebih mudah dan terstruktur.
