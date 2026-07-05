@@ -159,7 +159,7 @@ Evaluasi proposal mini menggunakan rubrik.
 
 > Dari seluruh proses WS-01 sampai WS-08, bagian mana yang paling mudah dan paling sulit? Mengapa? Apa yang akan dilakukan berbeda jika mengulang dari awal?
 
-**Bagian termudah:** Menentukan variabel penelitian dan metrik pengukuran karena sudah mengacu pada Research Question yang telah dirumuskan.
+**Bagian termudah:** Menentukan variabel penelitian dan metrik pengukuran karena sudah mengacu pada Research Question yang telah dirumuskan.  
 **Bagian tersulit:** Mengidentifikasi research gap dari literatur karena harus membandingkan beberapa penelitian dan menemukan kekurangan yang benar-benar didukung bukti.
 **Yang akan dilakukan berbeda:**
 > Jika mengulang dari awal, saya akan melakukan pencarian literatur secara lebih sistematis sejak awal dan menyusun referensi berdasarkan tema agar proses identifikasi research gap menjadi lebih mudah dan terstruktur.
