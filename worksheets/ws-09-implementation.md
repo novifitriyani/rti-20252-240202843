@@ -73,31 +73,35 @@ Mengandalkan "install library terbaru" berbahaya: versi berbeda = perilaku berbe
 EXPERIMENT SETUP DOCUMENTATION
 
 Hardware:
-  CPU     : ____________________
-  RAM     : ____________________
-  GPU     : ____________________
-  Storage : ____________________
-
+  CPU     : Intel® Core™ i5-8250U @ 1.60 GHz 
+  RAM     : 8 GB
+  GPU     : Intel® UHD Graphics 620 
+  Storage : TOSHIBA KSG60ZMV256G M.2 2280 SSD 256 GB
 Software:
-  OS        : ____________________
-  Runtime   : ____________________
-  Framework : ____________________
+  OS        : Microsoft Windows 11 Pro Version 25H2 (Build 10.0.26200.8655)
+  Runtime   : PHP 8.2.12
+  Framework : PHP Native
+
 
 Dependencies:
 | Library | Version | Sumber | Hash/Checksum |
 |---------|---------|--------|---------------|
-|         |         |        |               |
-|         |         |        |               |
+| PHP     | 8.2.12  | XAMPP  |       -       |
+| Apache  | 2.4.58  | XAMPP  |       -       |
+| MariaDB | 10.4.32 | XAMPP  |       -       |
+| HTML    | HTML5   | W3C    |       -       |
+| CSS     | CSS3    | W3C    |       -       |
+| JavaScript | ECMAScript  | ECMA  |       -       |
 
 Konfigurasi:
-  Config file     : ____________________
-  Random seed     : ____________________
-  Hyperparameters : ____________________
+  Config file     : config/koneksi.php
+  Random seed     : Tidak digunakan
+  Hyperparameters : Tidak ada
 
 Reproducibility Check:
-  [ ] Dependency terdokumentasi (requirements.txt / lock file)
+  [X] Dependency terdokumentasi (requirements.txt / lock file)
   [ ] Seed ditetapkan di semua level (Python, NumPy, framework)
-  [ ] Config di version control
+  [X] Config di version control
   [ ] README instruksi reproduksi lengkap
 ```
 
@@ -109,23 +113,24 @@ Dokumentasikan environment untuk eksperimen Anda (boleh environment saat ini ata
 
 | Komponen | Spesifikasi |
 |----------|------------|
-| CPU | *Contoh: Intel Core i7-12700H, 14 Core* |
-| RAM | *Contoh: 32 GB DDR5* |
-| GPU | *Contoh: NVIDIA RTX 3060 6GB / CPU-only jika tidak ada GPU* |
-| OS | *Contoh: Ubuntu 22.04 LTS / Windows 11* |
-| Runtime | |
-| Framework | |
-| Random Seed | |
+| CPU | Intel® Core™ i5-8250U @ 1.60 GHz |
+| RAM | 8 GB |
+| GPU | Intel® UHD Graphics 620 |
+| OS | Microsoft Windows 11 Pro Version 25H2 |
+| Runtime | PHP 8.2.12 |
+| Framework | PHP Native |
+| Random Seed | Tidak digunakan |
 
 **Dependencies (minimal 5):**
 
 | Library | Version | Alasan Dibutuhkan |
 |---------|---------|-------------------|
-| *Contoh: scikit-learn* | *1.3.2* | *Klasifikasi + evaluasi metrik* |
-| | | |
-| | | |
-| | | |
-| | | |
+| PHP | 8.2.12 | Menjalankan aplikasi web |
+| Apache | 2.4.58 | Web server |
+| MariaDB | 10.4.32 | Penyimpanan data arsip |
+| HTML5 | HTML5 | Struktur halaman web |
+| CSS3 | CSS3 | Tampilan antarmuka |
+| JavaScript | ECMAScript | Interaksi sederhana pada halaman web |
 
 ---
 
@@ -135,9 +140,9 @@ Rancang tes repeatability sederhana: jalankan kode yang sama 3× di environment 
 
 | Run | Seed | Metrik Utama | Hasil Sama? |
 |-----|------|-------------|-------------|
-| 1 | *Contoh: 42* | *Contoh: Accuracy* | — |
-| 2 | | | [ ] Ya / [ ] Tidak |
-| 3 | | | [ ] Ya / [ ] Tidak |
+| 1 | Tidak digunakan | Waktu pencarian dokumen | — |
+| 2 | Tidak digunakan | Waktu pencarian dokumen | [X] Ya / [ ] Tidak |
+| 3 | Tidak digunakan | Waktu pencarian dokumen | [X] Ya / [ ] Tidak |
 
 **Jika hasil berbeda, kemungkinan penyebab:**
 
@@ -147,7 +152,7 @@ Rancang tes repeatability sederhana: jalankan kode yang sama 3× di environment 
 > - **Cache dari run sebelumnya** — hasil tersimpan di memori/disk sehingga run berikutnya tidak menjalankan komputasi penuh
 > - **Random state tidak dikontrol di semua level** — Python seed di-set, tapi NumPy/PyTorch/TensorFlow punya seed independen
 
-___________________________________________________
+Perbedaan waktu dapat disebabkan oleh beban komputer yang berbeda, proses lain yang berjalan di latar belakang, atau koneksi ke database yang tidak stabil. 
 
 **Checklist kontrol yang sudah diterapkan:**
 - [ ] Random seed di-set di semua level
