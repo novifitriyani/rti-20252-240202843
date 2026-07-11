@@ -143,7 +143,7 @@ Data diambil dari 59 log pencarian sistem (kolom `Durasi (ms)`), diekspor dari m
 | Run keyword "proposal" (21:27:09 & 21:27:30) | 48 ms & 20 ms | Dua pencarian berurutan di sesi malam (21:2x), kemungkinan server sempat idle sebelum sesi ini dimulai | Dipertahankan; termasuk pola cold-start per sesi, bukan bug sistem |
 | Run keyword "formulir" (21:26:40) | 18 ms | Pencarian pertama di sesi 21:2x, konsisten dengan pola cold-start yang sama | Dipertahankan dengan catatan yang sama |
 
-**Catatan pola (Contextual/Pattern anomaly):** Outlier besar (>18 ms) cenderung muncul di **awal setiap sesi pengujian baru** (mis. awal jam 14:07, awal jam 21:06), sedangkan pencarian berikutnya dalam sesi yang sama turun ke 1–2 ms. Ini pola sistematis (bukan acak), mengindikasikan efek cold-start koneksi/cache, bukan kesalahan input atau bug logger.
+**Catatan pola (Contextual/Pattern anomaly):** Secara observasi, outlier besar (>18 ms) cenderung muncul di **awal setiap sesi pengujian baru** (mis. awal jam 14:07, awal jam 21:06), sedangkan pencarian berikutnya dalam sesi yang sama turun ke 1–2 ms. Pola waktunya sendiri adalah **fakta yang bisa dicek langsung dari timestamp**. Namun, penyebabnya — diduga efek cold-start koneksi/cache database — **masih berupa hipotesis, belum diverifikasi**. Kemungkinan penyebab lain (mis. beban proses lain di server saat itu) belum bisa disingkirkan tanpa pengujian tambahan (mis. mengulang pengukuran beberapa kali atau memeriksa log server pada jam-jam tersebut).
 
 ---
 
