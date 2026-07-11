@@ -70,11 +70,11 @@ EXECUTION PLAN
 
 | Run # | Skenario | Seed | Parameter | Status | Waktu | Output File |
 |-------|----------|------|-----------|--------|-------|-------------|
-| 1 | Perbandingan pencarian dokumen manual dan digital | Tidak digunakan | 1 dokumen | Planned | - | hasil_run1.csv |
-| 2 | Perbandingan pencarian dokumen manual dan digital | Tidak digunakan | 5 dokumen | Planned | - | hasil_run2.csv |
-| 3 | Perbandingan pencarian dokumen manual dan digital | Tidak digunakan | 10 dokumen | Planned | - | hasil_run3.csv |
-| 4 | Perbandingan pencarian dokumen manual dan digital | Tidak digunakan | 20 dokumen | Planned | - | hasil_run4.csv |
-| 5 | Perbandingan pencarian dokumen manual dan digital | Tidak digunakan | 50 dokumen | Planned | - | hasil_run5.csv |
+| 1 | Perbandingan pencarian dokumen manual dan digital | Tidak digunakan |  Dokumen uji yang sama, komputer yang sama, browser yang sama, dan kondisi lingkungan pengujian yang sama | Planned | - | - |
+| 2 | Perbandingan pencarian dokumen manual dan digital | Tidak digunakan |  Dokumen uji yang sama, komputer yang sama, browser yang sama, dan kondisi lingkungan pengujian yang sama | Planned | - | - |
+| 3 | Perbandingan pencarian dokumen manual dan digital | Tidak digunakan |  Dokumen uji yang sama, komputer yang sama, browser yang sama, dan kondisi lingkungan pengujian yang sama | Planned | - | - |
+| 4 | Perbandingan pencarian dokumen manual dan digital | Tidak digunakan |  Dokumen uji yang sama, komputer yang sama, browser yang sama, dan kondisi lingkungan pengujian yang sama | Planned | - | - |
+| 5 | Perbandingan pencarian dokumen manual dan digital | Tidak digunakan |  Dokumen uji yang sama, komputer yang sama, browser yang sama, dan kondisi lingkungan pengujian yang sama | Planned | - | - |
 
 
 Jumlah runs per skenario : 5
@@ -84,7 +84,7 @@ DATA LOG (per run):
   Run ID    : run-001
   Timestamp : Belum tersedia
   Skenario  : Perbandingan sistem manual dan sistem informasi pengarsipan digital
-  Input     : Jumlah dokumen yang dicari
+  Input     : Dokumen uji yang akan dicari pada sistem manual dan sistem informasi pengarsipan digital
   Output    : Waktu pencarian dokumen (detik)
   Anomali   : Belum diketahui
   Catatan   : Eksperimen akan dilakukan setelah implementasi sistem selesai.
@@ -98,18 +98,18 @@ Susun execution plan untuk eksperimen Anda. Tentukan skenario, jumlah run, dan s
 
 | Run # | Skenario | Seed | Parameter Kunci | Status |
 |-------|----------|------|----------------|--------|
-| 1 | Perbandingan sistem manual dan digital | Tidak digunakan | 1 dokumen | Planned |
-| 2 | Perbandingan sistem manual dan digital | Tidak digunakan | 5 dokumen | Planned |
-| 3 | Perbandingan sistem manual dan digital | Tidak digunakan | 10 dokumen| Planned |
-| 4 | Perbandingan sistem manual dan digital | Tidak digunakan | 20 dokumen| Planned |
-| 5 | Perbandingan sistem manual dan digital | Tidak digunakan | 50 dokumen| Planned |
+| 1 | Perbandingan sistem manual dan digital | Tidak digunakan | Dokumen uji yang sama, komputer yang sama, browser yang sama, dan kondisi lingkungan pengujian yang sama | Planned |
+| 2 | Perbandingan sistem manual dan digital | Tidak digunakan | Dokumen uji yang sama, komputer yang sama, browser yang sama, dan kondisi lingkungan pengujian yang sama | Planned |
+| 3 | Perbandingan sistem manual dan digital | Tidak digunakan |   Dokumen uji yang sama, komputer yang sama, browser yang sama, dan kondisi lingkungan pengujian yang sama | Planned |
+| 4 | Perbandingan sistem manual dan digital | Tidak digunakan |  Dokumen uji yang sama, komputer yang sama, browser yang sama, dan kondisi lingkungan pengujian yang sama | Planned |
+| 5 | Perbandingan sistem manual dan digital | Tidak digunakan |  Dokumen uji yang sama, komputer yang sama, browser yang sama, dan kondisi lingkungan pengujian yang sama | Planned |
 
 **Total skenario:** 1
 **Run per skenario:** 5
 **Total run keseluruhan:** 5
 
 **Keterangan:**
-Eksperimen direncanakan dilakukan sebanyak lima kali menggunakan prosedur yang sama untuk memperoleh data waktu pencarian yang lebih konsisten. Setiap run menggunakan jumlah dokumen sesuai skenario pengujian. Penelitian ini tidak menggunakan algoritma yang bersifat acak sehingga random seed tidak digunakan.
+Eksperimen direncanakan dilakukan sebanyak lima kali menggunakan prosedur yang sama untuk memperoleh data waktu pencarian yang lebih konsisten. Setiap run menggunakan dokumen uji, perangkat, browser, dan kondisi lingkungan pengujian yang sama agar hasil yang diperoleh dapat dibandingkan secara konsisten. Penelitian ini tidak menggunakan algoritma yang bersifat acak sehingga random seed tidak digunakan.
 
 ---
 
@@ -129,7 +129,7 @@ Desain format data log untuk eksperimen Anda. Tentukan field apa saja yang akan 
 | Field | Contoh |
 |-------|--------|
 | Seed | Tidak digunakan |
-| Code version | GitHub Repository (akan diperbarui setelah implementasi) |
+| Code version | Belum tersedia (implementasi website belum dibuat) |
 | Runtime | PHP 8.2.12 |
 | Database | MariaDB 10.4.32|
 | Web Server | Apache 2.4.58 |
@@ -141,7 +141,7 @@ Desain format data log untuk eksperimen Anda. Tentukan field apa saja yang akan 
 | Waktu pencarian sistem digital | float | ≥ 0 detik |
 | Selisih waktu pencarian | float | ≥ 0 detik |
 
-**Format output:** [X] CSV / [ ] JSON / [X] Database / [ ] Lainnya: ____
+**Format output:** [X] CSV / [ ] JSON / [ ] Database / [ ] Lainnya: ____
 
 ---
 
@@ -151,10 +151,10 @@ Rencanakan bagaimana menangani anomali. Untuk setiap jenis, tentukan langkah yan
 
 | Jenis Anomali | Contoh | Tindakan |
 |---------------|--------|----------|
-| Run gagal (crash) | Apache atau MariaDB berhenti saat pengujian | Dokumentasikan penyebab, jalankan kembali layanan, kemudian ulangi pengujian |
-| Hasil ekstrem | Waktu pencarian jauh lebih lama dibandingkan run lainnya | Periksa beban CPU, penggunaan memori, dan aplikasi yang sedang berjalan. |
-| Waktu eksekusi anomali | Komputer mengalami lag atau penggunaan CPU tinggi | Tutup aplikasi lain, kemudian lakukan pengujian ulang |
-| Inkonsistensi dengan run lain | Hasil pengujian berbeda cukup jauh | Periksa konfigurasi aplikasi dan database, kemudian ulangi pengujian dengan kondisi yang sama |
+| Run gagal (crash) | Sistem tidak dapat dijalankan | Dokumentasikan penyebab, perbaiki masalah, kemudian ulangi pengujian |
+| Hasil ekstrem | Waktu pencarian jauh lebih lama dibandingkan run lainnya | Periksa kondisi komputer, pastikan tidak ada proses lain yang memengaruhi pengujian, dokumentasikan penyebabnya, kemudian ulangi pengujian. |
+| Waktu eksekusi anomali | Komputer sedang menjalankan aplikasi lain | Dokumentasikan kondisi pengujian, tutup aplikasi lain yang berjalan di latar belakang, kemudian ulangi pengujian |
+| Inkonsistensi dengan run lain | Hasil pengujian berbeda cukup jauh | Periksa konfigurasi sistem, prosedur pengujian, dokumentasikan penyebab perbedaan hasil, kemudian lakukan pengujian ulang apabila diperlukan. |
 
 **Prinsip:** Detect → Investigate → Document → Decide
 
